@@ -95,25 +95,8 @@ document.addEventListener('mousemove', (e) => {
     }, duration);
   }
   
-  function explodeEmojis() {
-    const emojis = ["✨", "💥", "🌀", "💫", "🔥", "🌈"];
-    const container = document.querySelector(".crystal-container");
-    const rect = container.getBoundingClientRect();
   
-    for (let i = 0; i < 15; i++) {
-      const emoji = document.createElement("div");
-      emoji.className = "emoji";
-      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-  
-      emoji.style.left = `${rect.left + rect.width / 2 + (Math.random() * 100 - 50)}px`;
-      emoji.style.top = `${rect.top - 10}px`;
-      emoji.style.position = "absolute";
-  
-      document.body.appendChild(emoji);
-  
-      setTimeout(() => emoji.remove(), 2000);
-    }
-  }
+ 
   
 
   
