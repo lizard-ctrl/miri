@@ -1,0 +1,740 @@
+@font-face {
+  font-family: "Font";
+  src: url("assets/font/font.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Goozee";
+  src: url("fonts/Goozee.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  background-image: url('assets/flash/13.png');
+  background-size: cover;
+  font-family: "Font" ;
+ background-color: rgb(195, 164, 225);
+ 
+  
+  margin: 0;
+  overflow: hidden;
+  
+}
+
+#abtImg{
+  position: relative;
+  top:5%;
+  width: 400px;
+  height: 300px;
+}
+
+#nameImg{
+  position: relative;
+  top:5%;
+  width: 400px;
+  height: 100px;
+  
+}
+
+.image {
+  position: absolute;
+  top: -100px;
+  width: 400px;
+  transition: transform 0.2s;
+}
+
+.random-img {
+  position: absolute;
+  transition: transform 2s ease-in-out;
+  animation: pulse 5s infinite alternate ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+
+.container {
+  position: relative;
+  margin-top: 50px;
+}
+
+.crystal-container {
+  position: absolute;
+  top: 2%;
+  left: 25%;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#crystal-ball {
+  width: 120%;
+  display: block;
+}
+
+#tattoo {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  opacity: 0;
+  transition: opacity 2s;
+  pointer-events: none;
+}
+
+.question {
+  align-content: center;
+  font-size: 1.5rem;
+  margin: 20px 0 5px;
+}
+
+.answer {
+  color: darkorchid;
+  align-content: center;
+  font-size: 2rem;
+ z-index: 1000;
+  height: 2rem;
+}
+
+
+
+.emoji {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: floatUp 2s ease-out forwards;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) rotate(360deg);
+  }
+}
+
+#abtX{
+  position: absolute;
+ top: 10%;
+ right: 8%;
+}
+
+h2 {
+
+  z-index: 1000;
+  position: absolute;
+  color: hotpink;
+  text-align: center;
+  transition: font-family 0.5s ease-in-out;
+  
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14vw; 
+  white-space: nowrap; 
+}
+
+#book{
+  position: absolute;
+  right: 2%;
+  top: 0%;
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+#book:hover {
+  transform: scale(1.1); 
+}
+
+.star {
+  color: rgb(118, 227, 169);
+  z-index: -1000;
+  position: absolute;
+  font-size: 30px; 
+  animation: pulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.nav-container {
+  position: relative;
+  display: block;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.circle-btn {
+  position: absolute;
+  top: 3%;
+  
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: width 0.5s ease, font-size 0.3s ease;
+}
+
+.GeneratedMarquee {
+  font-family:'Comic Sans MS';
+  font-size:1.5em;
+width: 40%;
+  border-radius: 0%;
+  line-height: .2em;
+  color:rgba(135, 206, 250, 0.9);
+  background-color:darkorchid;
+  padding:1.5em;
+  }
+
+.nav-links {
+  background-color: rgb(195, 164, 225);
+  box-shadow: 0 0 40px 5px rgba(135, 206, 250, 0.9); /* lightskyblue glow */
+
+  width: 100vw;
+  /* optional: constrain width */
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center; /* center content horizontally inside column */
+  gap: 10px;
+  padding-left: 100px;
+  opacity: 1;
+  color: darkorchid;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+   /* or whatever you want */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.nav-link {
+  
+  color: darkorchid;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-shadow: hotpink 0px 0px 20px, hotpink 0px 0px 10px; 
+  font-size: 1.7vw;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+
+#rawrBar {
+  
+  position: fixed;
+  bottom: 35%;
+  left: 0;
+  width: 100%;
+  text-shadow: hotpink 0px 0px 20px, hotpink 0px 0px 10px; 
+  color:darkorchid;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 4vw;
+  z-index: 99;
+}
+
+#rawrBar a {
+  color: white;
+  text-decoration: underline;
+}
+
+#rawrBar a:hover {
+  text-decoration: none;
+}
+
+.nav-links .close-btn {
+  display: none;
+}
+
+
+.close-btn {
+  color: black;
+  padding: 10px 20px;
+  font-size: 10px;
+  text-decoration: none;
+  position: absolute;
+  top: -50px; 
+  right: 10px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+.link-bar {
+  
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  display:grid; 
+  gap: 30px; 
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+.link-icon img {
+  width: 100px; 
+  height: 100px;
+  object-fit: cover;
+}
+
+.link-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.link-bar a:hover {
+  transform: scale(1.1); 
+}
+
+.circle-btn.active {
+  width: 0px; 
+  border-radius: 0; 
+}
+
+.circle-btn.active + .nav-links {
+  opacity: 1; 
+  pointer-events: auto; 
+}
+
+.responsive-img {
+  padding: 20px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* centers the image horizontally */
+  object-fit: cover;
+}
+
+.content {
+  z-index: 3000;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  display: none;
+  
+  padding: 20px;
+  margin-top: 20px;
+  width: 60%;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+#about img{
+  width: 90%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.content.active {
+  display: block;
+}
+
+.content .close-btn {
+  font-size: 30px;
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.skull {
+  color: lightskyblue;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  font-size: 55px;
+  opacity: 1;
+  animation: fadeOut 10s forwards;
+   /* or hot pink or whatever you want */
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+#resume{
+  box-shadow: 0px 0px 25px 25px rgba(255, 78, 228, 0.8);
+  background-color: rgba(255, 78, 228, 0.8);
+    position: absolute;
+    z-index:1000;
+    top: 5%;
+    left: 45%;
+    width: 35%;
+    height: 80%;
+}
+.pdf{
+    z-index:2000;
+   
+    width: 90%;
+     height:100%;
+}
+
+#about{
+  box-shadow: 0px 0px 25px 25px rgba(135, 206, 250, 0.8);
+  background-color: rgba(135, 206, 250, 0.8);
+  color: darkorchid;
+  top: 24%;
+    width: 50%;
+    height: 40%;
+    font-size: 120%;
+    padding: 5%;
+    overflow: scroll;
+}
+
+#about1{
+  box-shadow: 0px 0px 25px 25px lightskyblue;
+
+  background-color: lightskyblue;
+  
+  color: darkorchid;
+  top: 25%;
+    width: 50%;
+    height: 40%;
+    font-size: 160%;
+    padding: 5%;
+    overflow: scroll;
+}
+
+
+
+
+iframe {
+  width: 95%;
+  height: 100%;
+  border: none; 
+}
+
+#info{
+  box-shadow: 0px 0px 25px 25px rgba(135, 206, 250, 0.8);
+  background-color: rgba(135, 206, 250, 0.8);
+ 
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    width: 40%;
+    height: 60%;
+    background-color: none;
+
+}
+
+
+#desktopHide{
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    font-family: "Font" ;
+   
+   
+    margin: 0;
+    overflow: hidden;
+    transition: background-image 1s none;
+  }
+
+  .nav-links {
+    background-color: rgb(195, 164, 225,.9);
+    box-shadow: none; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    line-height: -100px;
+  padding-top: 0;
+  padding-bottom: 0;
+    gap: 0px; /* Use positive value only */
+    padding: 0px 0px;
+    border-radius: 10px;
+    color: red;
+  
+    position: absolute;
+    top: 70%; /* now this will work */
+    left: 50%;
+    transform: translate(-50%, -20%); /* center both vertically and horizontally */
+    z-index: 999;
+  }
+  
+
+  .nav-link {
+    
+    font-size: 6.2vw; 
+    padding: 15px;
+  }
+
+  .GeneratedMarquee{
+    display: none;
+  }
+
+  #rawrBar {
+    font-size: 7vw; 
+    padding: 1px 0;
+  }
+
+  #mobileHide{
+    display: none;
+  }
+
+ 
+
+  h2 {
+    z-index: 1000;
+    
+    color: hotpink;
+    text-align: center;
+    transition: font-family 0.5s ease-in-out;
+    
+    
+    transform: translate(-50%, -50%);
+    font-size: 2vw; 
+    white-space: wrap; 
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9; 
+  }
+
+  #desktopHide{
+    display: block;
+  }
+  
+  
+  #rawrBar {
+    text-shadow: hotpink 0px 0px 20px, hotpink 0px 0px 10px; 
+    bottom: 35%;
+    
+  }
+
+  .random-img {
+    width: 10px; 
+    height: auto;
+  }
+
+  .content {
+    z-index: 3000;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    display: none;
+   
+    padding: 20px;
+    margin-top: 20px;
+    width: 60%;
+    border-radius: 10px;
+    overflow: scroll;
+  }
+
+  #about1{
+    box-shadow: 0px 0px 25px 25px lightskyblue;
+   
+    background-color: lightskyblue;
+    left: 5%;
+    color: darkorchid;
+    top: 23%;
+      width: 70%;
+      height: 40%;
+      font-size: 160%;
+      padding: 10%;
+      overflow: scroll;
+      overflow-x: hidden;
+  }
+
+  #abtX{
+    position: absolute;
+   top: 10%;
+   right: 8%;
+  }
+
+  
+
+.pdf {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#about {
+  position: absolute;;
+  top: 25%;
+  left: 3%;
+  font-size: 120%;
+  width: 80%;
+  height: 50%;
+  padding: 5%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#info{
+    position: absolute;
+    left: 5%;
+    width: 80%;
+}
+
+.content .close-btn {
+  font-size: 30px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+}
+
+.link-bar {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  display: flex;
+  gap: 20px; 
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+.link-icon img {
+  width: 75px; 
+  height: 75px;
+  object-fit: cover;
+}
+
+.link-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.link-bar a:hover {
+  transform: scale(1.1); 
+}
+
+
+iframe {
+  width: 95%;
+  height: 95%;
+  border: none; 
+}
+
+  .link-bar {
+    right: 0; 
+    left: 0; 
+    justify-content: center; 
+    bottom: 10px; 
+  }
+
+  .link-bar a {
+    margin: 0 10px; 
+  }
+
+  #phoneNo{
+    display: none;
+  }
+
+  #info{
+    position: absolute;
+    top: 25%;
+    left: 3%;
+    width: 80%;
+    height: 50%;
+    background-color: none;
+}
+
+
+.image {
+  position: absolute;
+  top: -100px;
+  width: 200px;
+  transition: transform 0.5s;
+}
+
+
+.crystal-container {
+  position: absolute;
+  top: 0%;
+  left: 45%;
+  width: 200px;
+  margin: 0 auto;
+}
+
+#crystal-ball {
+  width: 80%;
+  display: block;
+}
+
+#tattoo {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  opacity: 0;
+  transition: opacity 2s;
+  pointer-events: none;
+}
+
+#rawwwr{
+  background-color: rgb(195, 164, 225,.9);
+  position: absolute;
+  top: 95%;
+  left: 4%;
+  width: 100%;
+  height: auto;
+
+
+}
+
+#abtImg{
+  position: relative;
+  top:10%;
+  width: 200px;
+  height: 150px;
+}
+
+}
